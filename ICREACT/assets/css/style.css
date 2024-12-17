@@ -141,19 +141,61 @@ p {
     -webkit-box-shadow: 0px 5px 29px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 5px 29px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 29px 0px rgba(0, 0, 0, 0.25); }
-  .main-btn.main-btn-2 {
-    background: -webkit-linear-gradient(left, #102baf 0%, #1664ff 50%, #102baf 100%);
-    background: -o-linear-gradient(left, #102baf 0%, #1664ff 50%, #102baf 100%);
-    background: linear-gradient(to right, #102baf 0%, #1664ff 50%, #102baf 100%);
-    background-size: 200% auto;
-    color: #fff;
-    background-position: left center;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(72, 127, 255, 0.23);
-    -moz-box-shadow: 0px 8px 16px 0px rgba(72, 127, 255, 0.23);
-    box-shadow: 0px 8px 16px 0px rgba(72, 127, 255, 0.23); }
+
+    .main-btn.main-btn-2 {
+      background: -webkit-linear-gradient(left, #102baf 0%, #1664ff 50%, #102baf 100%);
+      background: -o-linear-gradient(left, #102baf 0%, #1664ff 50%, #102baf 100%);
+      background: linear-gradient(to right, #102baf 0%, #1664ff 50%, #102baf 100%);
+      background-size: 200% auto;
+      color: #fff;
+      background-position: left center;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    
+      /* Default white glow effect */
+      -webkit-box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.8);
+      -moz-box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.8);
+      box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.8);
+    
+      /* Pulsing animation for glow */
+      animation: white-glow 1.5s infinite alternate;
+    }
+    
+    /* Hover Effect - Enhanced Glow */
     .main-btn.main-btn-2:hover {
       background-position: right center;
-      color: #fff; }
+      color: #fff;
+    
+      /* Enhanced white glow on hover */
+      -webkit-box-shadow: 0px 0px 30px 15px rgba(255, 255, 255, 1);
+      -moz-box-shadow: 0px 0px 30px 15px rgba(255, 255, 255, 1);
+      box-shadow: 0px 0px 30px 15px rgba(255, 255, 255, 1);
+      transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+    
+    /* Keyframes for pulsing white glow effect */
+    @keyframes white-glow {
+      0% {
+        box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.6);
+      }
+      50% {
+        box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.8);
+      }
+      100% {
+        box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.6);
+      }
+    }
+    
+    
+    .main-btn.main-btn-2:focus {
+      animation: glow 1.5s infinite alternate; /* Adds pulsing glow on focus */
+    }
+    
 
 /*===== All Section Title Style =====*/
 .section-title .title {
@@ -2258,6 +2300,3 @@ li {
 .custom-toggle-bar{
   left: 400px;
 }}
-
-
-
